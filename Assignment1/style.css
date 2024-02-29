@@ -1,0 +1,277 @@
+ .hydrated{
+  background-color: #1e1d1d;
+ }
+ #main{
+  display: flex;
+  justify-content: flex-start;
+  padding: 30px;
+  align-items: flex-start;
+  height: auto;
+} 
+#out {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: flex-start; */
+  height:auto;
+  background-color: rgb(97, 99, 95);
+  width: 160px;
+  border-top-right-radius: 83px;
+  border-top-left-radius: 83px;
+  /* overflow: hidden; */
+  padding-top: 22px;
+  padding-left: 8px;
+  padding-right: 8px; 
+}
+
+#inner {
+  background-color: aqua;
+  border-radius: 50%;
+  width: 147px;
+  height: 127px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  overflow: hidden;
+  margin-left: 5px;
+  /* margin-top :2px;; */
+}
+
+#inner img {
+  border-radius: 20%;
+  width: 105%;
+  height: 104%;
+}
+h1{
+  color: #ffffff;
+  text-decoration: bold;
+}
+#box{
+  display:flex;
+background-color: rgb(56, 55, 55);
+z-index: 2; 
+position: relative;
+width:190px ;
+height:30px;
+align-items: center;
+font-size:xx-small;
+justify-content: center;
+margin-top: 9px;
+margin-left: -7px;
+padding-bottom: 3px;
+}
+#content{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  color: whitesmoke;
+}
+ul{
+  list-style-type:square;
+  padding:15px;
+  margin-top:0px
+
+}
+li::marker{
+  color: rgb(255, 255, 255);
+}
+#new{
+  /* float: right; */
+  display: inline-block;
+  flex-grow:1;
+  width: 80%;
+  height: auto;
+  /* margin-left: -20px; */
+  background-color: rgb(255 255 255);
+}
+#headin{
+  margin-bottom: 0px;
+  margin-top:0px ;
+  letter-spacing: 5px;
+  font-size: 1.5em;
+  font-family: monospace;
+  text-align: center;
+
+}
+
+#ani{
+  display: flex;
+  color: #000000;
+  /* text-align: center; */
+  font-family: fantasy;
+  letter-spacing: 5px;
+  /* font-weight: bold; */
+  font-size: 3em;
+ padding-left: 150px;
+ margin-bottom: 10px;
+ white-space: nowrap;
+ width: 100%;
+ overflow: hidden;
+
+ animation: 
+ typing 10s,
+ cursor .4s step-end infinite alternate;
+
+}
+
+@keyframes cursor{
+ 80% { border-color: transparent;}
+}
+@keyframes typing{
+from{ width:0}
+
+}
+#box1{
+  display: flex;
+  background-color:  rgb(53, 53, 53);
+  margin-top: 9px;
+  margin-left: 70px;
+  margin-right: 101px;
+  padding-bottom: 3px;
+  height:30px;
+  border-radius: 20px;
+  align-items: center;
+font-size:small;
+justify-content: center;
+}
+ #bullet{
+  padding-left:73px;
+  margin-top:0px ;
+}
+#line{
+  display: inline;
+  background-color: rgb(0, 0, 0);
+}
+/* .workExperience>ul>li ul {
+  padding-left: 0.5cm;
+  list-style-type: disc;
+}
+.workExperience>ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+.workExperience>ul>li {
+  position: relative;
+  margin: 0;
+  padding-bottom: 0.5cm;
+  padding-left: 0.5cm;
+}
+.workExperience>ul>li:before {
+  background-color: #000000;
+  width: 0.05cm;
+  content: '';
+  position: absolute;
+  top: 0.1cm;
+  bottom: -0.2cm; 
+  left:16px;
+}
+.workExperience>ul>li::after {
+  content: '';
+  position: absolute;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' viewBox='0 0 32 32' focusable='false'%3E%3Ccircle stroke='none' fill='%23484444' cx='16' cy='16' r='10'%3E%3C/circle%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: -0.09cm;
+  top: 0;
+  width: 0.35cm;
+  height: 0.35cm;
+}
+.jobPosition {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.jobPosition span, 
+.projectName span {
+  font-family: 'Source Sans Pro', sans-serif;
+} */
+.triangle{
+  width: 0;
+  display: flex;
+	height: 0;
+	border-left: -21px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 28px solid #000000;
+}
+#tri1{
+  margin-top: -806px;
+}
+#tri2{
+  margin-top: 126px; 
+}
+#tri3{
+  margin-top: 219px; 
+}
+#tri4{
+  margin-top: 140px; 
+}
+
+#edu{
+  margin-left:-19px;
+  padding-left:25px;
+  padding-top: 14px;
+  padding-bottom: 0px;
+}
+a{
+  margin-left: 32px;
+  font-size: 20px;
+  font-weight: bold;
+}
+#edu1{
+margin-left: 157px;
+/* padding-top:-100px; */
+margin-top: 5px;
+}
+#edu2{
+  margin-left: 130px;
+  padding-top: 14px;
+  padding-bottom: 0px;
+}
+#edu3{
+  margin-left: 32px;
+  margin-top: 5px;
+  font-size: 17px;
+}
+.info ul{
+list-style: none;
+margin-top:-6px;
+margin-left: -15px;
+color: white;
+}
+#skill{
+  background-color: red;
+}
+#in{
+  background-color: #000000;
+}
+.container{
+ background-color: rgb(148, 145, 145);
+ margin-left: 128px;
+ width: 209px;
+ display: flex;
+}
+.skillset{
+  text-align: right;
+  color: rgb(254, 255, 255);
+  padding-right: 5px;
+  padding-top: 0px;
+  padding-bottom: 4px;
+}
+.sql{
+width:80%;
+background-color: rgb(49, 49, 49);
+}
+#p1{
+
+  margin-left: 161px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.java{
+  width:70%;
+  background-color: rgb(49, 49, 49);
+}
+.mining{
+  width:90%;
+  background-color: rgb(49, 49, 49);
+}
