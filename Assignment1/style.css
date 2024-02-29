@@ -1,3 +1,20 @@
+page {
+  background: rgb(230 234 235);
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5cm;
+  position: relative;
+}
+
+page[size="A4"] {  
+  width: 21cm;
+  height: 29.7cm; 
+}
+
+@page {
+  size: 21cm 29.7cm;
+  margin: 0mm;
+}
  .hydrated{
   background-color: #1e1d1d;
  }
@@ -7,6 +24,7 @@
   padding: 30px;
   align-items: flex-start;
   height: auto;
+  background-color:rgb(230 234 235);
 } 
 #out {
   display: flex; 
@@ -14,18 +32,17 @@
   justify-content: center;
   /* align-items: flex-start; */
   height:auto;
-  background-color: rgb(97, 99, 95);
+  background-color: rgb(42 71 127);
   width: 160px;
   border-top-right-radius: 83px;
   border-top-left-radius: 83px;
   /* overflow: hidden; */
-  padding-top: 22px;
+  padding-top: 24px;
   padding-left: 8px;
   padding-right: 8px; 
 }
 
 #inner {
-  background-color: aqua;
   border-radius: 50%;
   width: 147px;
   height: 127px;
@@ -48,7 +65,7 @@ h1{
 }
 #box{
   display:flex;
-background-color: rgb(56, 55, 55);
+background-color: rgb(10 29 61);
 z-index: 2; 
 position: relative;
 width:190px ;
@@ -56,7 +73,7 @@ height:30px;
 align-items: center;
 font-size:xx-small;
 justify-content: center;
-margin-top: 9px;
+margin-top: 23px;
 margin-left: -7px;
 padding-bottom: 3px;
 }
@@ -68,7 +85,8 @@ padding-bottom: 3px;
 ul{
   list-style-type:square;
   padding:15px;
-  margin-top:0px
+  margin-top:0px;
+  margin-bottom: -15px;
 
 }
 li::marker{
@@ -81,7 +99,7 @@ li::marker{
   width: 80%;
   height: auto;
   /* margin-left: -20px; */
-  background-color: rgb(255 255 255);
+  background-color: rgb(230 234 235);
 }
 #headin{
   margin-bottom: 0px;
@@ -97,11 +115,11 @@ li::marker{
   display: flex;
   color: #000000;
   /* text-align: center; */
-  font-family: fantasy;
+  font-family: serif;
   letter-spacing: 5px;
   /* font-weight: bold; */
   font-size: 3em;
- padding-left: 150px;
+ padding-left: 98px;
  margin-bottom: 10px;
  white-space: nowrap;
  width: 100%;
@@ -122,8 +140,8 @@ from{ width:0}
 }
 #box1{
   display: flex;
-  background-color:  rgb(53, 53, 53);
-  margin-top: 9px;
+  background-color: rgb(10 29 61);
+  margin-top: 49px;
   margin-left: 70px;
   margin-right: 101px;
   padding-bottom: 3px;
@@ -193,16 +211,16 @@ justify-content: center;
 	border-top: 28px solid #000000;
 }
 #tri1{
-  margin-top: -806px;
+  margin-top: -868px;
 }
 #tri2{
-  margin-top: 126px; 
+  margin-top: 139px; 
 }
 #tri3{
-  margin-top: 219px; 
+  margin-top: 364px; 
 }
 #tri4{
-  margin-top: 140px; 
+  margin-top: 184px; 
 }
 
 #edu{
@@ -243,11 +261,29 @@ color: white;
 #in{
   background-color: #000000;
 }
-.container{
- background-color: rgb(148, 145, 145);
- margin-left: 128px;
+.c1{
+ background-color: rgb(158 171 179);
+ margin-left: 148px;
  width: 209px;
- display: flex;
+ display:inline-flex;
+}
+.c2{
+  background-color: rgb(158 171 179);
+  margin-left: 131px;
+  width: 209px;
+  display:inline-flex;
+}
+.c3{
+  background-color: rgb(158 171 179);
+  margin-left: 89px;
+  width: 209px;
+  display:inline-flex;
+}
+.c4{
+  background-color: rgb(158 171 179);
+  margin-left: 18px;
+  width: 209px;
+  display:inline-flex;
 }
 .skillset{
   text-align: right;
@@ -258,20 +294,25 @@ color: white;
 }
 .sql{
 width:80%;
-background-color: rgb(49, 49, 49);
+background-color: rgb(13, 36, 75);
 }
 #p1{
 
-  margin-left: 161px;
+  margin-left: 42px;
   margin-bottom: 5px;
   font-size: 20px;
   font-weight: bold;
+  display: inline-flex;
 }
 .java{
   width:70%;
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(13, 36, 75);
 }
 .mining{
   width:90%;
-  background-color: rgb(49, 49, 49);
+  background-color: rgb(13, 36, 75);
+}
+.ml{
+  width:90%;
+  background-color: rgb(13, 36, 75);
 }
