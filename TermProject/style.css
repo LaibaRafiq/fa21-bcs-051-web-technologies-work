@@ -125,7 +125,7 @@ section{
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background: rgba(0, 140, 255, 0.959);
+    background: rgba(97, 134, 111, 0.959);
 }
 
 .home:before{

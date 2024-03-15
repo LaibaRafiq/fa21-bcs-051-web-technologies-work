@@ -3,7 +3,7 @@ const navigation = document.querySelector(".navigation");
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".img-slide");
 const contents = document.querySelectorAll(".content");
-
+const inputs = document.querySelectorAll(".input");
 let sliderNav = function(manual) {
     btns.forEach((btn) => {
         btn.classList.remove("active");
@@ -27,8 +27,6 @@ btns.forEach((btn, i) => {
         sliderNav(i);
     });
 });
-const inputs = document.querySelectorAll(".input");
-
 function focusFunc() {
   let parent = this.parentNode;
   parent.classList.add("focus");
