@@ -1,81 +1,202 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="hydrated" style="width: fit-content;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Versace</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+     rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <style>
-        .navbar {
-            padding: 1rem 1rem;
-        }
-        ion-icon {
-            font-size: 1.5rem;
-            vertical-align: middle;
-            transition: color 0.3s; /* Transition for smooth color change */
-        }
-        .nav-link:hover,
-        .nav-link:focus {
-            color: grey; /* Color change on hover/focus */
-        }
-        .navbar .btn {
-            transition: color 0.3s; /* Transition for smooth color change */
-        }
-        .navbar .btn:hover ion-icon {
-            color: grey; /* Grey color on hover */
-        }
-        /* Dropdown Menu */
-        .dropdown:hover .dropdown-menu {
-            display: block; /* Show dropdown on hover */
-            transition: opacity 0.3s ease-in-out; /* Smooth transition for dropdown */
-            opacity: 1;
-        }
-        .dropdown-menu {
-            opacity: 0; /* By default, the dropdown menu is transparent */
-        }
-        @media (max-width: 991px) {
-            .navbar .btn:not(:first-child) {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar fixed-top navbar-light bg-light navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">VERSACE</a>
+            <a class="navbar-brand" href="#">TINY GARDEN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo" aria-controls="navbarTogglerDemo" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            NEW IN
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <!-- Dropdown items -->
-                            <li><a class="dropdown-item" href="#">Item 1</a></li>
-                            <li><a class="dropdown-item" href="#">Item 2</a></li>
-                        </ul>
-                    </li>
+                
                     <li class="nav-item">
-                        <a class="nav-link" href="#">BAGS</a>
+                        <a class="nav-link" href="#">HOME</a>
                     </li>
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        PRODUCTS
+                        </a>
+                        <div class="dropdown-menu w-100 mt-0" aria-labelledby="navbarDropdown" style="
+                        border-top-left-radius: 0;
+                        border-top-right-radius: 0;
+                    ">
+        <div class="container">
+            <div class="row my-4">
+            <div class="col-md-6 col-xl-3 mb-3 mb-xl-0">
+                <div class="pt-2">
+                <p class="text-uppercase font-weight-bold">
+                    Explicabo voluptas
+                </p>
+                <div class="bg-image hover-overlay shadow-1-strong rounded ripple mb-4"
+                    data-mdb-ripple-color="light">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp" class="img-fluid" />
+                    <a href="#!">
+                    <div class="mask" style="
+                                    background-color: rgba(
+                                        251,
+                                        251,
+                                        251,
+                                        0.15
+                                    );
+                                    "></div>
+                    </a>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="" class="text-info"><i class="fas fa-plane pe-1"></i>Travels</a>
+                    <p><u>15.07.2020</u></p>
+                </div>
+                <a href="" class="text-dark">
+                    <h5>This is title of the news</h5>
+                    <p>
+                    Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit.
+                    Odit, iste aliquid. Sed id nihil
+                    magni, sint vero provident esse
+                    numquam perferendis ducimus dicta
+                    adipisci iusto nam temporibus modi
+                    animi laboriosam?
+                    </p>
+                </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mb-3 mb-xl-0">
+                <div class="pt-2">
+                <p class="text-uppercase font-weight-bold">
+                    Explicabo voluptas
+                </p>
+                <a href="" class="text-dark">
+                    <div class="row mb-4 border-bottom pb-2">
+                    <div class="col-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp"
+                        class="img-fluid shadow-1-strong rounded" alt="Hollywood Sign on The Hill" />
+                    </div>
+                    <div class="col-9">
+                        <p class="mb-2">
+                        <strong>Lorem ipsum dolor sit
+                            amet</strong>
+                        </p>
+                        <p><u>15.07.2020</u></p>
+                    </div>
+                    </div>
+                </a>
+                <a href="" class="text-dark">
+                    <div class="row mb-4 border-bottom pb-2">
+                    <div class="col-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp"
+                        class="img-fluid shadow-1-strong rounded" alt="Palm Springs" />
+                    </div>
+                    <div class="col-9">
+                        <p class="mb-2">
+                        <strong>Lorem ipsum dolor sit
+                            amet</strong>
+                        </p>
+                        <p><u>15.07.2020</u></p>
+                    </div>
+                    </div>
+                </a>
+                <a href="" class="text-dark">
+                    <div class="row mb-4 border-bottom pb-2">
+                    <div class="col-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp"
+                        class="img-fluid shadow-1-strong rounded" alt="Los Angeles Skyscrapers" />
+                    </div>
+                    <div class="col-9">
+                        <p class="mb-2">
+                        <strong>Lorem ipsum dolor sit
+                            amet</strong>
+                        </p>
+                        <p><u>15.07.2020</u></p>
+                    </div>
+                    </div>
+                </a>
+                <a href="" class="text-dark">
+                    <div class="row mb-4 border-bottom pb-2">
+                    <div class="col-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp"
+                        class="img-fluid shadow-1-strong rounded" alt="Skyscrapers" />
+                    </div>
+                    <div class="col-9">
+                        <p class="mb-2">
+                        <strong>Lorem ipsum dolor sit
+                            amet</strong>
+                        </p>
+                        <p><u>15.07.2020</u></p>
+                    </div>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3 mb-3 mb-md-0">
+                <div class="list-group list-group-flush">
+                <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                    Iste quaerato
+                </p>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Cras justo odio</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Est iure</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Praesentium</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Laboriosam</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Dolor sit</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Amet consectetur</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Cras justo odio</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Adipiscing elit</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+                <div class="list-group list-group-flush">
+                <p class="mb-0 list-group-item text-uppercase font-weight-bold">
+                    Cras justo odio
+                </p>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Saepe</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Vel alias</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Sunt doloribus</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Cum dolores</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Perspiciatis quo</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Cras justo odio</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Laudantium maiores</a>
+                <a href="" class="list-group-item list-group-item-action"><i
+                    class="fas fa-caret-right pe-2"></i>Provident dolor</a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT US</a>
+        </li>
                     <!-- Add other menu items here -->
                 </ul>
                 <div class="d-flex">
                     <!-- Icons -->
-                    <div class="btn dropdown">
-                        <a role="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="search-outline"></ion-icon></a>
-                        <ul class="dropdown-menu">
-                            <!-- Dropdown items -->
-                            <li><a class="dropdown-item" href="#">Search Item 1</a></li>
-                            <li><a class="dropdown-item" href="#">Search Item 2</a></li>
-                        </ul>
-                    </div>
+        
                     <div class="btn dropdown">
                         <a role="button" data-bs-toggle="dropdown" aria-expanded="false"><ion-icon name="heart-outline"></ion-icon></a>
                         <ul class="dropdown-menu">
@@ -105,7 +226,250 @@
                             </div>
                             </div>
                             </div>
-                            </nav>
+                        </nav>
+  <section class="home">
+     <img decoding="async" class="img-slide active" src="plant1.jpg" ></img>
+           <img decoding="async" class="img-slide" src="ports.jpg" ></img>
+                            <img decoding="async" class="img-slide" src="3.webp" ></img>
+                            <img decoding="async" class="img-slide" src="4.webp" ></img>
+                            <img decoding="async" class="img-slide" src="5.jpg" ></img>
+                            <div class="content active">
+                                <h1>USSF-44.<br><span>Mission</span></h1>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                <div class="box">
+                                    <input type="checkbox" id="check">
+                                    <div class="search-box">
+                                      <input type="text" placeholder="Type here...">
+                                      <label for="check" class="icon">
+                                        <ion-icon name="search-outline"></ion-icon>
+                                      </label>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="content">
+                              <h1>STARSHIP UPDATE.<br><span>Rocket</span></h1>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              <div class="box">
+                                <input type="checkbox" id="check">
+                                <div class="search-box">
+                                  <input type="text" placeholder="Type here...">
+                                  <label for="check" class="icon">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="content">
+                              <h1>INTELSAT.<br><span>G-31MISSION</span></h1>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              <div class="box">
+                                <input type="checkbox" id="check">
+                                <div class="search-box">
+                                  <input type="text" placeholder="Type here...">
+                                  <label for="check" class="icon">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="content">
+                              <h1>NASA ASTRONAUTS.<br><span>THE MOON</span></h1>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              <div class="box">
+                                <input type="checkbox" id="check">
+                                <div class="search-box">
+                                  <input type="text" placeholder="Type here...">
+                                  <label for="check" class="icon">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="content">
+                              <h1>Space Travel.<br><span>Rocket</span></h1>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                              <div class="box">
+                                <input type="checkbox" id="check">
+                                <div class="search-box">
+                                  <input type="text" placeholder="Type here...">
+                                  <label for="check" class="icon">
+                                    <ion-icon name="search-outline"></ion-icon>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                             <div class="media-icons">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div> 
+                            <div class="slider-navigation">
+                                <div class="nav-btn active"></div>
+                                <div class="nav-btn"></div>
+                                <div class="nav-btn"></div>
+                                <div class="nav-btn"></div>
+                                <div class="nav-btn"></div>
+                            </div>
+                        </section> 
+                        <!-- SERVICESS -->
+ <div class="maincontain">
+    <div class="service-wrapper">
+        <div class="service">
+            <h1 class="heading">Our Services <span></span></h1>
+            <div class="cards">
+                <div class="card">
+                    <i class=""></i>
+                   <h2>Bussines</h2>
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. 
+                        Veniam aperiam natus soluta dignissimos
+                         distinctio illo animi, voluptatum aliquid ducimus nesciunt vel, quasi facere quos autem quisquam,
+                         deleniti nobis? Ratione, aliquam?</p>
+                </div>
+                <div class="card">
+                    <i class=""></i>
+                    <h2>Bussines</h2>
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. 
+                        Veniam aperiam natus soluta dignissimos
+                         distinctio illo animi, voluptatum aliquid ducimus nesciunt vel, quasi facere quos autem quisquam,
+                         deleniti nobis? Ratione, aliquam?</p>
+                </div> 
+                <div class="card">
+                    <i class=""></i>
+                    <h2>Bussines</h2>
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. 
+                        Veniam aperiam natus soluta dignissimos
+                         distinctio illo animi, voluptatum aliquid ducimus nesciunt vel, quasi facere quos autem quisquam,
+                         deleniti nobis? Ratione, aliquam?</p>
+                </div>
+
+                <div class="card">
+                    <i class=""></i>
+                    <h2>Bussines</h2>
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. 
+                        Veniam aperiam natus soluta dignissimos
+                         distinctio illo animi, voluptatum aliquid ducimus nesciunt vel, quasi facere quos autem quisquam,
+                         deleniti nobis? Ratione, aliquam?</p>
+                </div> 
+
+                <div class="card">
+                    <i class=""></i>
+                    <h2>Bussines</h2>
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. 
+                        Veniam aperiam natus soluta dignissimos
+                         distinctio illo animi, voluptatum aliquid ducimus nesciunt vel, quasi facere quos autem quisquam,
+                         deleniti nobis? Ratione, aliquam?</p>
+                </div> 
+
+                <div class="card">
+                    <i class=""></i>
+                    <h2>Bussines</h2>
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. 
+                        Veniam aperiam natus soluta dignissimos
+                         distinctio illo animi, voluptatum aliquid ducimus nesciunt vel, quasi facere quos autem quisquam,
+                         deleniti nobis? Ratione, aliquam?</p>
+                </div> 
+
+                <div class="card">
+                    <i class=""></i>
+                    <h2>Bussines</h2>
+                    <p>Lorem ipsum dolor sit, 
+                        amet consectetur adipisicing elit. 
+                        Veniam aperiam natus soluta dignissimos
+                         distinctio illo animi, voluptatum aliquid ducimus nesciunt vel, quasi facere quos autem quisquam,
+                         deleniti nobis? Ratione, aliquam?</p>
+                </div> 
+
+            </div>
+        </div>
+    </div>
+ </div>
+
+ <!-- CONTACT US  -->
+ <div class="con">
+    <span class="big-circle"></span>
+    <img src="img/shape.png" class="square" alt="" />
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+          dolorum adipisci recusandae praesentium dicta!
+        </p>
+
+        <div class="info">
+          <div class="information">
+            <img src="img/location.png" class="icon" alt="" />
+            <p>92 Cherry Drive Uniondale, NY 11553</p>
+          </div>
+          <div class="information">
+            <img src="img/email.png" class="icon" alt="" />
+            <p>lorem@ipsum.com</p>
+          </div>
+          <div class="information">
+            <img src="img/phone.png" class="icon" alt="" />
+            <p>123-456-789</p>
+          </div>
+        </div>
+
+        <div class="social-media">
+          <p>Connect with us :</p>
+          <div class="social-icons">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form action="index.html" autocomplete="off">
+          <h3 class="title">Contact us</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" />
+            <label for="">Username</label>
+            <span>Username</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" />
+            <label for="">Email</label>
+            <span>Email</span>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" class="input" />
+            <label for="">Phone</label>
+            <span>Phone</span>
+          </div>
+          <div class="input-container textarea">
+            <textarea name="message" class="input"></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input type="submit" value="Send" class="btn" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"  defer data-deferred="1"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
      crossorigin="anonymous"></script>
