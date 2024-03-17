@@ -7,10 +7,15 @@
 font-size: 29px; /* Adjust the size as needed */
 font-family:cursive;
 padding-right: 62px;
+color: white;
+font-weight: 800;
+letter-spacing: 8px;
 }
 .nav-link {
 margin-right: 50px;
 font-size: 1rem;
+color: white;
+font-weight: 600;
 }
 ion-icon {
   font-size: 1.5rem;
@@ -25,13 +30,24 @@ ion-icon {
 }
 .navbar .btn {
   transition: color 0.3s;
-  font-size: 1.5rem; /
+  font-size: 1.5rem; 
+  color: white;
 }
 .navbar .btn:hover ion-icon {
   color:rgb(46, 120, 0);
- 
-  
-  
+}
+.navbar-scrolled{
+    background-color: #ececec;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  } 
+  .navbar-scrolled .nav-link{
+    color: #242424;
+}
+.navbar-scrolled .navbar-brand{
+    color: black;
+}
+.navbar-scrolled .btn {
+color: black;
 }
 /* Dropdown Menu */
 .dropdown:hover .dropdown-menu {
@@ -74,7 +90,7 @@ main {
     min-height: 100vh;
     overflow: hidden;
     background-color: #5a9a7c;
-    background-image: url(img2.png);
+    background-image: url(leaves.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 4rem;

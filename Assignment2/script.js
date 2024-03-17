@@ -1,3 +1,12 @@
+const navEl= document.querySelector('.navbar');
+window.addEventListener('scroll',()=> {
+  if(window.scrollY>=40){
+    navEl.classList.add('navbar-scrolled')
+  }
+  else if(window.scrollY < 40){
+    navEl.classList.remove('navbar-scrolled')
+  }
+})
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector(".contact-form");
   const inputs = form.querySelectorAll(".input-field");
