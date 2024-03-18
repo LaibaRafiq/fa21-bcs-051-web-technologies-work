@@ -1,0 +1,78 @@
+
+.heading{
+    background-image: url("img2.png");
+    background-size: cover;
+    height:780px;
+}
+#createForm{
+    background-color: white;
+    margin:65px;
+    margin-left: 188px;
+    width: 694px;
+    border-radius: 37px;
+    height: 80%;
+}
+label{
+    font-weight: 500;
+    font-size:1.5rem ;
+    font-family: monospace;
+}
+button{
+    /* margin:50px; */
+margin-left:49px;
+}
+
+.form-group {
+padding-top: 26px;
+padding-left: 54px;
+margin-bottom: 1rem;
+}
+.form-control {
+display: block;
+width: 78%;
+border: 1.5px solid black;
+}
+    .cards-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 106px;
+        margin-top: 80px;
+        
+    }
+
+    .card {
+        background-color: rgb(171 190 164 / 75%);
+        padding: 3% 8%;
+        border: 0.2px solid black;
+        border-radius: 15px;
+        transition: .6s;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        background-image: url("Untitled\ design.png");
+    }
+    @media screen and (max-width: 1000px) {
+        .heading {
+    height: 780px; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+#createForm {
+    height: 80%;
+    margin: 20px auto; 
+    width: 694px;
+}
+
+.form-group {
+    padding-left: 20px; 
+}
+
+.cards-container {
+    
+    gap: 20px; 
+    margin-top: 40px;
+}
+}
