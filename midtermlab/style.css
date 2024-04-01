@@ -1,0 +1,289 @@
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: #fff;
+}
+
+.col-md-3{
+    display: flex;
+    flex-direction: column;
+}
+.col-md-3 p{
+    padding: 50px;
+    font-weight: 600;
+    font-size: 30px;
+}
+hr{
+    /* width: 95vw; */
+    margin: 0 auto;
+}
+.vl {
+    border-left: 6px solid rgb(168, 168, 168);
+    height: 800px;
+  }
+img{
+    width: 69%;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.1em;
+}
+.navbar .navbar-nav .nav-link:hover{
+    color: #808080;
+}
+@media only screen and (min-width: 992px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .navbar .navbar-nav {
+    border-bottom: 2px solid #000;
+  }
+  .navbar .nav-item {
+    padding: 0.5em 1em;
+  }
+}
+.navbar .navbar-nav {
+  margin-top: 0.5em;
+  border-top: 2px solid #000;
+}
+
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+hr{
+    width: 95vw;
+    margin: 0 auto;
+}
+
+
+main a{
+    padding: 15px 0;
+    display: block;
+    transition: all 0.5s;
+}
+
+main span{
+    transition: padding-left 0.5s;
+}
+
+main a:hover span{
+    padding-left: 5px;
+}
+
+main a:hover{
+    color: #7ac64d;
+}
+
+
+.main-container-left{
+    padding: 30px 10px;
+}
+
+.main-container-left > h2{
+    padding: 15px 0 15px 30px;
+}
+
+.main-container-left h3{
+    padding: 10px 0;
+    font-size: 18px;
+    font-family: var(--heading);
+}
+
+.main-container-left p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.main-container-left{
+    padding: 10px;
+}
+
+.container-top-left{
+    padding: 15px 30px;
+}
+
+.container-bottom-left{
+    background: #f3f3f3;
+    margin: 15px 30px;
+}
+
+
+.main-container-right{
+    padding: 30px 10px;
+}
+
+.main-container-right > h2{
+    padding: 15px 0 15px 30px;
+}
+
+.main-container-right div{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    padding: 15px 0;
+    border-bottom: 1px solid #7ac64d;
+}
+
+.main-container-right div :last-child{
+    border-bottom: none;
+}
+
+.main-container-right img{
+    width: 100px;
+    height: 100px;
+    align-self: center;
+}
+
+.main-container-right h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 12px;
+    align-self: center;
+}
+
+.main-container-right div h2{
+    font-size: 18px;
+    padding: 10px 0;
+    font-family: var(--heading);
+}
+
+.main-container-right div p{
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.main-container-right  div{
+    margin-right: 10px;
+}
+
+
+
+
+@media(max-width: 500px){
+    .main-container-right div{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .main-container-right div h4{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        align-self: flex-start;
+    }
+
+    .main-container-right div img{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .main-container-right div div{
+        grid-row: 1/3;
+        grid-column: 2/3;
+    }
+}
+
+
+@media(min-width: 768px){
+    .banner-sub-content{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container-bottom-left{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+@media(min-width: 992px){
+    main{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 1080px){
+    .banner{
+        grid-template-columns: 1fr 2fr;
+    }
+}
+footer {
+    color: #333;
+    background-color: #e6f7f8; /* The mint green background color */
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    width: 100px; /* Adjust as necessary */
+}
+
+.footer-breaking-news {
+    text-align: center;
+}
+
+.footer-links a,
+.footer-social a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-social a img {
+    width: 24px; /* Adjust as necessary */
+}
+
+.footer-auth button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #a2a2d0; /* The purple color for buttons */
+    color: white;
+    cursor: pointer;
+}
+
+.footer-auth button:first-child {
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #333;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-breaking-news,
+    .footer-links,
+    .footer-social,
+    .footer-auth {
+        margin-bottom: 10px;
+    }
+}
+
