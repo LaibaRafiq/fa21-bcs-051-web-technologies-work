@@ -11,7 +11,7 @@ padding-right: 62px;
 }
 .nav-link {
 margin-right: 50px;
-font-size: 1rem;
+font-size: 1.35rem;
 color: #353d36;
 font-weight: 750;
 }
@@ -22,8 +22,11 @@ ion-icon {
 }
 .nav-link:hover,
 .nav-link:focus {
-    color:  rgb(182, 49, 194); 
+    color: rgb(46, 78, 63);
+    font-size: 1.45rem;
+    text-decoration: underline; 
 }
+
 .navbar .btn {
     transition: color 0.3s;
     font-size: 1.5rem; /

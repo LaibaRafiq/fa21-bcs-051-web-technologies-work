@@ -1,3 +1,4 @@
+
 const navEl= document.querySelector('.navbar');
 window.addEventListener('scroll',()=> {
   if(window.scrollY>=45){
@@ -8,8 +9,8 @@ window.addEventListener('scroll',()=> {
   }
 })
 
-const menuBtn = document.querySelector(".menu-btn");
-const navigation = document.querySelector(".navigation");
+// const menuBtn = document.querySelector(".menu-btn");
+// const navigation = document.querySelector(".navigation");
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".img-slide");
 const contents = document.querySelectorAll(".content");

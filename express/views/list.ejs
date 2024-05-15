@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= pageTitle %></title>
+</head>
+<body>
+    <h1><%= pageTitle %></h1>
+    <a href="/plants/new">Add New Plant</a>
+    <br>
+    <p>Page: <%= page %> Records: <%= total %></p>
+    <ul>
+        <% for( let index = 1; index <= totalPages; index++ ) { %>
+            <li style="display: inline;">
+                <a href="/plants/page/<%= index %>"><%= index %></a>
+            </li>
+        <% } %>
+    </ul>
+    <% for( let index = 0; index < plants.length; index++ ) { %>
+        <div class="plant">
+            <h3 class="plant-title"><%= plants[index].name %></h3>
+            <p>Species: <%= plants[index].species %></p>
+            <p>Price: <%= plants[index].price %></p>
+            <p>Description: <%= plants[index].description %></p>
+            <a href="/plants/<%= plants[index]._id %>/edit">Edit</a>
+            <a href="/plants/<%= plants[index]._id %>/delete">Delete</a>
+        </div>
+    <% } %>
+</body>
+</html>

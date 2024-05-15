@@ -1,0 +1,9 @@
+<h2>Edit Plant</h2>
+
+<form action="/plants/<%= plants._id %>/edit" method="post">
+    Name: <input type="text" name="name" value="<%= plants.name %>"/> <br>
+    Species: <input type="text" name="species" value="<%= plants.species %>"/> <br>
+    Price: <input type="number" name="price" value="<%= plants.Price %>"/> <br>
+    Description: <input type="text" name="description" value="<%= plants.description %>"/> <br>
+    <input type="submit" value="Update Plant">
+</form>
