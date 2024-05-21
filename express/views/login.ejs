@@ -1,8 +1,19 @@
-<form action="/login" method="post" style="margin-top: 119px;">
+<% if (user) { %>
+  <form action="/logout" method="post" style="margin-top: 119px;">
+    <button type="submit" class="submit-btn">Log out</button>
+  </form>
+<% } else { %>
+  <% if (success && success.length > 0) { %>
+    <div class="alert alert-success"><%= success %></div>
+  <% } %>
+  <% if (error && error.length > 0) { %>
+    <div class="alert alert-danger"><%= error %></div>
+  <% } %>
+  <form action="/login" method="post" style="margin-top: 119px;">
     <div class="form-holder">
       <input type="email" class="input" name="email" placeholder="Email" required />
       <input type="password" class="password" name="password" placeholder="Password" required />
     </div>
     <button type="submit" class="submit-btn">Log in</button>
   </form>
-  
+<% } %>

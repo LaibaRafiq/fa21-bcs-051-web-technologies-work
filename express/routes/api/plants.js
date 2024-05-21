@@ -1,15 +1,17 @@
 let express = require("express");
 let router = express.Router();
-const req = require("express/lib/request");
 let Plant = require("../../models/plant"); 
+const multer = require("multer");
+const storage = multer.memoryStorage();
+const upload = multer({ storage: storage });
+const req = require("express/lib/request");
+const isAdmin = require("../../middleware/isAdmin"); 
 
 
-
-
-router.get("/plants/new", async (req, res) => {
+router.get("/plants/new", isAdmin,async (req, res) => {
  res.render("plants/new");
 });
-router.post("/plants/new", async (req, res) => {
+router.post("/plants/new", isAdmin,async (req, res) => {
   try {
     let record = new Plant(req.body);
     await record.save();
@@ -20,7 +22,7 @@ router.post("/plants/new", async (req, res) => {
     res.status(500).send("Error saving plant");
   }
 });
-router.post("/plants/:id/edit", async (req, res) => {
+router.post("/plants/:id/edit",isAdmin, async (req, res) => {
   try {
     let plant = await Plant.findById(req.params.id);
     if (!plant) {
@@ -40,13 +42,13 @@ router.post("/plants/:id/edit", async (req, res) => {
 });
 
 
-router.delete("/plants/:id", async (req, res) => {
+router.delete("/plants/:id",isAdmin, async (req, res) => {
   let plant = await Plant.findByIdAndDelete(req.params.id);
   return res.send(plant);
 });
 
 
-router.get("/plants/:id/delete", async (req, res) => {
+router.get("/plants/:id/delete", isAdmin,async (req, res) => {
   let plant = await Plant.findByIdAndDelete(req.params.id);
   if (!plant) {
     return res.status(404).send("Plant not found");
@@ -55,7 +57,7 @@ router.get("/plants/:id/delete", async (req, res) => {
 });
 
 
-router.get("/plants/:id/edit", async (req, res) => {
+router.get("/plants/:id/edit",isAdmin, async (req, res) => {
   let plant = await Plant.findById(req.params.id);
   return res.render("edit", { plant });
 });
@@ -67,6 +69,7 @@ router.get("/plants/:page?", async (req, res) => {
     .skip(pageSize * (page - 1))
     .limit(pageSize);
   let total = await Plant.countDocuments();
+  console.log(req.session.user,'userr role')
   let totalPages = Math.ceil(total / pageSize);
   res.render("list", {
     pageTitle: "List All plants",
@@ -75,6 +78,7 @@ router.get("/plants/:page?", async (req, res) => {
     page,
     pageSize,
     totalPages,
+    user: req.session.user,
   });
 });
 module.exports = router;
