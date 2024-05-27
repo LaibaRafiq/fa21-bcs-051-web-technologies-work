@@ -80,7 +80,16 @@
 
             <label for="description">Description:</label>
             <input type="text" id="description" name="description" value="<%= plant.description %>" class="form-control"/>
-
+            <div id="imageContainer">
+                <% plant.images.forEach((image, index) => { %>
+                <div class="imageEntry">
+                    <label for="images[<%= index %>].url">Image URL:</label>
+                    <input type="text" id="images[<%= index %>].url" name="images[<%= index %>].url" value="<%= image.url %>" placeholder="Image URL">
+                    <label for="images[<%= index %>].description">Image Description:</label>
+                    <input type="text" id="images[<%= index %>].description" name="images[<%= index %>].description" value="<%= image.description %>" placeholder="Image Description">
+                </div>
+                <% }); %>
+            </div>
             <input type="submit" value="Update Plant" class="form-button"/>
         </form>
     </div>

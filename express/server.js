@@ -12,6 +12,11 @@ const Planter = require("./models/planter");
 const sitemiddle = require("./middleware/sitemiddle");
 const nodemailer = require('nodemailer');
 const isAdmin = require("./middleware/isAdmin");
+const { uploadOnCloudinary } = require("./utils/cloudinaryConfig");
+const { upload } = require("./middleware/multerConfig");
+const path = require("path");
+const fs = require("fs");
+const ServiceWorkerRegistration = express();
 
 let server = express();
 server.use(express.json());
@@ -85,6 +90,7 @@ server.get("/login", (req, res) => {
   res.render("login", { error: req.flash('error') });
 });
 
+
 server.get("/register", (req, res) => {
   res.render("register", { error: req.flash('error') });
 });
@@ -96,34 +102,86 @@ server.get("/", (req, res) => {
 server.get("/homepage.html", (req, res) => {
   res.render("homepage", { user: req.session.user });
 });
+// server.get("/plants/:page?", async (req, res) => {
+//   const page = req.params.page || 1; 
+//   const skip = (page - 1) * pageSize;
+
+//   const total = await Plant.countDocuments();
+//   const totalPages = Math.ceil(total / pageSize);
+
+//   const plants = await Plant.find()
+//     .skip(skip)
+//     .limit(pageSize);
+//     console.log(plants);
+
+//     res.render("list", {
+//       pageTitle: "List All plants",
+//       plants: plants,
+//       total: total,
+//       page: parseInt(page),
+//       pageSize,
+//       totalPages,
+//       user: req.session.user.role,
+//     });
+// });
 server.get("/plants/:page?", async (req, res) => {
-  const page = req.params.page || 1; 
-  const skip = (page - 1) * pageSize;
-
-  const total = await Plant.countDocuments();
-  const totalPages = Math.ceil(total / pageSize);
-
-  const plants = await Plant.find()
-    .skip(skip)
+  let page = Number(req.params.page) ? Number(req.params.page) : 1;
+  let pageSize = 4;
+  let plants = await Plant.find()
+    .skip(pageSize * (page - 1))
     .limit(pageSize);
-    console.log(plants);
-
-    res.render("list", {
-      pageTitle: "List All plants",
-      plants: plants,
-      total: total,
-      page: parseInt(page),
-      pageSize,
-      totalPages,
-      user: req.session.user.role,
-    });
+  let total = await Plant.countDocuments();
+  console.log(req.session.user,'userr role')
+  let totalPages = Math.ceil(total / pageSize);
+  res.render("products", {
+    pageTitle: "List All plants",
+     plants:plants,
+    total:total,
+    page,
+    pageSize,
+    totalPages,
+    user: req.session.user,
+  });
 });
-
-
+server.get("/products", async (req, res) => {
+  try {
+    const products = await Plant.find();
+    res.render("products", { products });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).send("Error fetching products");
+  }
+});
 mongoose.connect("mongodb+srv://laiba:laiba@cluster0.hstchks.mongodb.net/plants").then(() => {
   console.log("DB Connected");
 });
 
 server.listen(3000, () => {
   console.log("Server started at localhost:3000");
+});
+
+
+
+//cloudinary
+ServiceWorkerRegistration.post("/upload", upload.single("image"), async (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ error: "No file uploaded" });
+  }
+
+  const localFilePath = req.file.path;
+  try {
+    const imageUrl = await uploadOnCloudinary(localFilePath);
+    if (imageUrl) {
+      return res.redirect("/cars");
+    } else {
+      return res.status(500).json({ error: "Failed to upload image to Cloudinary" });
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  } finally {
+    if (fs.existsSync(localFilePath)) {
+      fs.unlinkSync(localFilePath);
+    }
+  }
 });

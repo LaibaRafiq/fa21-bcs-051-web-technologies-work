@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const User = require("../../models/user");
+const jwt = require('jsonwebtoken');
+const SECRET = 'your_secret_key';
 
 router.get('/register', (req, res) => {
   if (req.session.user) {
@@ -50,8 +52,9 @@ router.post('/login', async (req, res) => {
     }
 
     if (await bcrypt.compare(password, user.password)) {
-      req.session.userId = user._id;
-      req.session.user = user;
+      const token = jwt.sign({ id: user._id, name: user.name, role: user.role }, SECRET, { expiresIn: '5min' });
+      res.cookie('token', token, { httpOnly: true });
+      req.session.user = { id: user._id, name: user.name, role: user.role };
       res.redirect('/');
     } else {
       req.flash('error', 'Invalid email or password.');
@@ -65,8 +68,11 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
+  res.clearCookie('token');
   req.session.destroy();
   res.redirect('/');
 });
 
 module.exports = router;
+
+

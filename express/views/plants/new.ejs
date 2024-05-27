@@ -83,6 +83,15 @@
                 <label for="description">Description:</label>
                 <input type="text" id="description" name="description" class="form-control" required />
             </div>
+            <label for="images">Images:</label>
+        <div id="imageContainer">
+            <div class="imageEntry">
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="images[0][url]">
+                <label for="imageDescription">Image Description:</label>
+                <input type="text" id="imageDescription" name="images[0][description]">
+            </div>
+        </div>
             <button type="submit" class="btn-submit">Add Plant</button>
         </form>
     </div>

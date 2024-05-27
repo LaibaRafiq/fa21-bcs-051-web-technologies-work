@@ -4,6 +4,63 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
           crossorigin="anonymous"></script>
+          <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            .products-container {
+                display: flex;
+                justify-content: space-around;
+                margin: 20px 0;
+            }
+            .product-card {
+                display: flex;
+                background: #fff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                overflow: hidden;
+                width: 32%;
+                align-items: center;
+            }
+            .out {
+              width:200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+                border-radius: 10px 0 0 10px;
+                /* background: #f0f0f0;  */
+            }
+            .product-image {
+                /* flex: 0 0 45%; */
+                height: 200px;
+                background-size: cover;
+                background-position: center;
+                border-radius: 10px 0 0 10px;
+            }
+            .product-info {
+                flex: 1;
+                padding: 20px;
+                text-align: left;
+            }
+            .product-info p {
+                font-weight: bold;
+                color: #777;
+                margin: 0 0 5px;
+            }
+            .product-info h2 {
+                font-size: 1.2em;
+                margin: 0 0 10px;
+                color: #2f4223;
+            }
+            .product-info .shop-now {
+                color: #2f4223;
+                font-weight: bold;
+                text-decoration: none;
+                border-bottom: 2px solid #2f4223;
+            }
+        </style>
 
   <section class="home">
      <img decoding="async" class="img-slide active" src="img/pexels.jpg" ></img>
@@ -15,7 +72,7 @@
                                 <h1>TAKE CARE OF YOUR TREES AND THEY WILL TAKE CARE 
                                     OF<br><span>YOU</span></h1>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <div class="box">
+                                <!-- <div class="box">
                                     <input type="checkbox" id="check">
                                     <div class="search-box">
                                       <input type="text" placeholder="Type here...">
@@ -23,7 +80,7 @@
                                         <ion-icon name="search-outline"></ion-icon>
                                       </label>
                                     </div>
-                                  </div>
+                                  </div> -->
                             </div>
                             <div class="content">
                               <h1>Create Your Own<br><span>GARDEN</span></h1>
@@ -228,32 +285,64 @@
         <img src="img/Your paragraph text1.png" />
       </div>
     </div>
-                                      <!-- SALE COUNTDOWN -->
+    <!-- SALES COUNTDOWN -->
     <div class="overlay"></div>
- <div class="wrapper">
-   <div class="">
-     <h1 class="title"><span>SALE</span>Ends In</h1>
-     <div class="countdown-cont">
-       <div>
-         <p id="days" class="big-text">0</p>
-         <span>Days</span>
-       </div>
-       <div>
-        <p id="hours" class="big-text">0</p>
-        <span>Hours</span>
-      </div>
-      <div>
-        <p id="min" class="big-text">0</p>
-        <span>Min</span>
-      </div>
-      <div>
-        <p id="sec" class="big-text">0</p>
-        <span>Sec</span>
-      </div>
-     </div>
-   </div>
- </div>
+    <div class="wrapper">
+        <div class="">
+            <h1 class="title"><span>SALE</span>Ends In</h1>
+            <div class="countdown-cont">
+                <div>
+                    <p id="days" class="big-text">0</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours" class="big-text">0</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="min" class="big-text">0</p>
+                    <span>Min</span>
+                </div>
+                <div>
+                    <p id="sec" class="big-text">0</p>
+                    <span>Sec</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="products-container">
+        <div class="product-card">
+            <div class="out">
+                <div class="product-image" style="background-image: url('/img/p1.png');width: 171px;"></div>
+            </div>
+            <div class="product-info">
+                <p>Big Sale Products</p>
+                <h2>Plants For Interiors</h2>
+                <a href="#" class="shop-now">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="out">
+                <div class="product-image" style="background-image: url('/img/p2.png');width: 144px;"></div>
+            </div>
+            <div class="product-info">
+                <p>Top Products</p>
+                <h2>Plants For Healthy</h2>
+                <a href="#" class="shop-now">SHOP NOW</a>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="out">
+                <div class="product-image" style="background-image: url('/img/p3.png');width: 171px;"></div>
+            </div>
+            <div class="product-info">
+                <p>Trending Now</p>
+                <h2>Plants For Interior</h2>
+                <a href="#" class="shop-now">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
  <!-- CLIENT REVIEWS -->
 
  <div class="clientreview">

@@ -33,6 +33,10 @@ router.post("/plants/:id/edit",isAdmin, async (req, res) => {
     plant.species = req.body.species;
     plant.price = req.body.price;
     plant.description = req.body.description;
+    plant.images = req.body.images.map(image => ({
+      url: image.url,
+      description: image.description
+    }));
     await plant.save();
     return res.redirect("/plants"); 
   } catch (error) {
@@ -81,4 +85,28 @@ router.get("/plants/:page?", async (req, res) => {
     user: req.session.user,
   });
 });
+
+
+router.get("/products/:page?", async (req, res) => {
+  let page = Number(req.params.page) ? Number(req.params.page) : 1;
+  let pageSize = 4;
+  let plants = await Plant.find()
+    .skip(pageSize * (page - 1))
+    .limit(pageSize);
+  let total = await Plant.countDocuments();
+  let totalPages = Math.ceil(total / pageSize);
+  res.render("products", {
+    pageTitle: "List All Plants",
+    products: plants,
+    total: total,
+    page,
+    pageSize,
+    totalPages,
+    user: req.session.user,
+  });
+});
 module.exports = router;
+
+
+
+

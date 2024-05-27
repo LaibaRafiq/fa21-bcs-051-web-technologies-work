@@ -3,10 +3,16 @@
 <head>
   <title>Contact Us</title>
 </head>
+<style>
+  .navbar{
+ background-color: #ffffffb0;;
+  
+  }
+</style>
 <body>
   <!-- CONTACT US  -->
 
-  <% if (user && user.role === 'user') { %>
+  <% if (user && user.role === 'user' || user && user.role === 'admin') { %>
     <% if (typeof successMessage !== 'undefined' && successMessage !== null) { %>
       <div class="success-message" style="background-color: green; font-size: 1.5rem;">
         <%= successMessage %>
