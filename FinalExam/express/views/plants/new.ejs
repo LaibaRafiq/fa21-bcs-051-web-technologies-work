@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Plant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-color: #f4f4f9;
+        font-family: Arial, sans-serif; 
+    }
+
+    .header-container {
+        background-image: url('/img/listbg.png'); 
+        background-size: cover;
+        background-position: center;
+        padding: 20px 0;
+        text-align: center;
+        color: #fff; 
+        margin-top: 70px; 
+    }
+
+    .form-container {
+        max-width: 600px;
+        background: #ededed;
+        margin: 20px auto;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px; /* Spacing between inputs */
+        border-radius: 4px;
+        border: 1px solid #ccc; /* Subtle borders for inputs */
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50; /* Consistent with the edit page button color */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .btn-submit:hover {
+        background-color: #45a049; /* Darker shade for hover effect */
+    }
+</style>
+<body>
+    <div class="header-container">
+        <h1>Add New Plant</h1>
+    </div>
+    <div class="form-container">
+        <form action="/plants/new" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="species">Species:</label>
+                <input type="text" id="species" name="species" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input type="text" id="description" name="description" class="form-control" required />
+            </div>
+            <label for="images">Images:</label>
+        <div id="imageContainer">
+            <div class="imageEntry">
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" id="imageUrl" name="images[0][url]">
+                <label for="imageDescription">Image Description:</label>
+                <input type="text" id="imageDescription" name="images[0][description]">
+            </div>
+        </div>
+            <button type="submit" class="btn-submit">Add Plant</button>
+        </form>
+    </div>
+</body>
+</html>

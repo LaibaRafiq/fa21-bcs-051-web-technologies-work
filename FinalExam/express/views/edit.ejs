@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Plant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f9; /* Soft background color */
+            font-family: Arial, sans-serif; /* Consistent font */
+        }
+
+        .header-container {
+            background-image: url('/img/listbg.png'); /* Replace with your actual image path */
+            background-size: cover;
+            margin-top: 70px;
+            background-position: center;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff; /* White text color for better visibility on likely dark images */
+        }
+
+        .edit-form-container {
+            max-width: 764px;
+            background: #ededed;
+           
+            margin: 20px auto; /* Reduced top margin to bring form closer to header */
+            padding: 30px;
+           
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px; /* Spacing between inputs */
+            border-radius: 4px;
+            border: 1px solid #ccc; /* Subtle borders for inputs */
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50; /* Green background for the submit button */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-button:hover {
+            background-color: #45a049; /* Slightly darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>Edit Plant Details</h1>
+    </div>
+    <div class="edit-form-container">
+        <form action="/plants/<%= plant._id %>/edit" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<%= plant.name %>" class="form-control"/>
+            
+            <label for="species">Species:</label>
+            <input type="text" id="species" name="species" value="<%= plant.species %>" class="form-control"/>
+
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" value="<%= plant.price %>" class="form-control"/>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" value="<%= plant.description %>" class="form-control"/>
+            <div id="imageContainer">
+                <% plant.images.forEach((image, index) => { %>
+                <div class="imageEntry">
+                    <label for="images[<%= index %>].url">Image URL:</label>
+                    <input type="text" id="images[<%= index %>].url" name="images[<%= index %>].url" value="<%= image.url %>" placeholder="Image URL">
+                    <label for="images[<%= index %>].description">Image Description:</label>
+                    <input type="text" id="images[<%= index %>].description" name="images[<%= index %>].description" value="<%= image.description %>" placeholder="Image Description">
+                </div>
+                <% }); %>
+            </div>
+            <input type="submit" value="Update Plant" class="form-button"/>
+        </form>
+    </div>
+</body>
+</html>
